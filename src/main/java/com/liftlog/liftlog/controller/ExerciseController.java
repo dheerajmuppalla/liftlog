@@ -19,6 +19,6 @@ public class ExerciseController {
     }
 
 
-    @GetMapping("/exercises")
-    public List<SaveExerciseDto> getAllExcercises
+//    @GetMapping("/exercises")
+//    public List<SaveExerciseDto> getAllExcercises
 }
