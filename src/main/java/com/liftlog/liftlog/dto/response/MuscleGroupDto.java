@@ -1,4 +1,4 @@
-package com.liftlog.liftlog.dto;
+package com.liftlog.liftlog.dto.response;
 
 
 import lombok.*;
