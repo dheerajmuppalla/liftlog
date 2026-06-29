@@ -61,7 +61,6 @@ public class MuscleGroupService {
         String name = saveMuscleGroupDto.getName().toLowerCase();
         MuscleGroup muscleGroup = muscleGroupRepo.findById(id).orElseThrow(()->new RecordNotFoundException("Record with " + id + " not found"));
         muscleGroup.setName(name);
-        muscleGroup.setCreatedAt(LocalDateTime.now());
         return muscleGroupRepo.save(muscleGroup);
     }
 }

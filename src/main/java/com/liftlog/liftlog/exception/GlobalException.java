@@ -13,13 +13,13 @@ import java.time.LocalDateTime;
 public class GlobalException {
 
     @ExceptionHandler(Exception.class)
-    public ErrorResponse response(Exception ex){
-        return ErrorResponse.builder()
+    public ResponseEntity<?> response(Exception ex){
+        return ResponseEntity.badRequest().body(ErrorResponse.builder()
                 .success(false)
-                .status(500)
+                .status(400)
                 .createdAt(LocalDateTime.now())
                 .message(ex.getMessage())
-                .build();
+                .build());
     }
 
 
